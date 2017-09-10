@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace boxing
 {
@@ -6,7 +7,20 @@ namespace boxing
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<object> box = new List<object>();
+            box.Add(7);
+            box.Add(28);
+            box.Add(-1);
+            box.Add(true);
+            box.Add("chair");
+            int sum = 0;
+            foreach (var item in box)
+            {
+                Console.WriteLine(item);
+                if (item is int) {
+                    sum = sum + item;
+                }
+            }
         }
     }
 }
