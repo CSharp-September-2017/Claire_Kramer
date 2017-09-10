@@ -18,9 +18,10 @@ namespace boxing
             {
                 Console.WriteLine(item);
                 if (item is int) {
-                    sum = sum + item;
+                    sum += (int)item;
                 }
             }
+            Console.WriteLine("The sum of the integers is {0}", sum);
         }
     }
 }
