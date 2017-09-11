@@ -23,16 +23,19 @@ namespace human
         }
         public void Attack(object victim)
         {
+            Human enemy = victim as Human;
             int damage = 5 * strength;
-            health -= damage;
-            Console.WriteLine("{0} attacked and did {1} damage", name, damage);
+            enemy.health -= damage;
+            Console.WriteLine("{0} attacked and did {1} damage to {2}", name, damage, enemy.name);
         }
     }
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Human batman = new Human("Batman");
+            Human catwoman = new Human("Cat Woman");
+            batman.Attack(catwoman);
         }
     }
 }
