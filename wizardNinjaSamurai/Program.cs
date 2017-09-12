@@ -46,7 +46,7 @@ namespace wizardNinjaSamurai
     }
 
     public class Wizard : Human {
-        public Wizard() : base("Wizard") {
+        public Wizard(string newName) : base(newName) {
             health = 50;
             intelligence = 25;
         }
@@ -58,22 +58,22 @@ namespace wizardNinjaSamurai
         public void Fireball(object victim) {
             Human enemy = victim as Human;
             Random rand = new Random();
-            int damage = rand.Next(20, 50);
+            int damage = rand.Next(20, 51);
             enemy.health -= damage;
             Console.WriteLine("{0} atttacked {1} and did {2} damage.", name, enemy.name, damage);
         }
     }
 
     public class Ninja : Human {
-        public Ninja() : base("Ninja") {
+        public Ninja(string newName) : base(newName) {
             dexterity = 175;
         }
 
         public void Steal(object victim) {
             Human enemy = victim as Human;
-            enemy.health -= 10;
+            attack(enemy);
             health += 10;
-            Console.WriteLine("{0} stole 10 HP from {1}", name, enemy.name);
+            Console.WriteLine("{0} stole health from {1}", name, enemy.name);
         }
 
         public void GetAway() {
@@ -83,8 +83,10 @@ namespace wizardNinjaSamurai
     }
 
     public class Samurai : Human {
-        public Samurai() : base("Samurai") {
+        public static int count = 0;
+        public Samurai(string newName) : base(newName) {
             health = 200;
+            count++;
         }
         public void DeathBlow(object victim) {
             Human enemy = victim as Human;
@@ -99,13 +101,19 @@ namespace wizardNinjaSamurai
         public void Meditate() {
             health = 200;
         }
+        public static void HowMany() {
+            Console.WriteLine("There are {0} Samurais", count);
+        } 
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Wizard dumbledore = new Wizard("Dumbledore");
+            Ninja donatello = new Ninja("Donatello");
+            Samurai sam = new Samurai("Shredder");
+            donatello.Steal(sam);
         }
     }
 }
