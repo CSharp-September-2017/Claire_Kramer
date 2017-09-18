@@ -7,7 +7,10 @@
     <body>
         <h1>The current time and date:</h1>
         @{
-            DateTime CurrentTime = DateTime.Now;
+            DateTime CurrentDate = DateTime.Now;
+            string CurrentDay = String.Format("{0:MMM d, yyyy}", CurrentDate);
+            string CurrentTime = String.Format("{0:hh:mm tt}", CurrentDate);
+            <p>@CurrentDay</p>
             <p>@CurrentTime</p>
         }
     </body>

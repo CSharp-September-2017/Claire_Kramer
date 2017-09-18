@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(circle, lightgrey, darkgray); /* Safari */  
+    background: -moz-radial-gradient(circle, lightgrey, darkgray); /* Firefox 3.6 to 15 */
+    background: radial-gradient(circle, lightgrey, darkgray); /* Standard syntax */
+}
+
+h1 {
+    margin: 10px 10px;
+}
+
+form {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+input {
+    padding: 1px;
+}
+
+label {
+    font-weight: bold;
+    padding: 2px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:  hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
