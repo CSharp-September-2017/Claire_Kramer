@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
+// Claire, this is really good.  I'm glad you picked up on how you get classes to interact with one another.  
+// Well done on the types necessary to build the list of cards, same with the player's hand.
+// All the methods were done really well and the return types were spot on.
 namespace cards
 {
     public class Card 
