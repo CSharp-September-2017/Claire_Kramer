@@ -35,8 +35,8 @@ li a:hover {
 }
 
 img {
-    float: left;
-    display: block;
+    display: inline-block;
+    padding-right: 15px;
 }
 
 .text {
