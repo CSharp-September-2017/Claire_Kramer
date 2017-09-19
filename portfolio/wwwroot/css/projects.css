@@ -35,5 +35,22 @@ li a:hover {
 }
 
 h1 {
-    color: white;
+    padding: 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.projects {
+    width: 30%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px groove black;
 }
