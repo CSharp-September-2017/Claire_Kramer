@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DbConnection;
-
+// Solid coding Claire.  It looks like it's making sense to you. Just make sure to run the Read() after every Insert();
 namespace dbconnection
 {
     class Program
