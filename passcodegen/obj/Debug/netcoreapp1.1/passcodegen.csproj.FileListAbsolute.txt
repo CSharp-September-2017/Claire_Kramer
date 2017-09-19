@@ -1,0 +1,8 @@
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/bin/Debug/netcoreapp1.1/passcodegen.deps.json
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/bin/Debug/netcoreapp1.1/passcodegen.runtimeconfig.json
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/bin/Debug/netcoreapp1.1/passcodegen.runtimeconfig.dev.json
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/obj/Debug/netcoreapp1.1/passcodegen.AssemblyInfo.cs
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/bin/Debug/netcoreapp1.1/passcodegen.dll
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/bin/Debug/netcoreapp1.1/passcodegen.pdb
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/obj/Debug/netcoreapp1.1/passcodegen.dll
+/Users/clairekramer/Desktop/DojoAssignments/C#/passcodegen/obj/Debug/netcoreapp1.1/passcodegen.pdb
