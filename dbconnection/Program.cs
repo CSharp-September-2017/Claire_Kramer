@@ -9,6 +9,13 @@ namespace dbconnection
         static void Read(){
             string query = "Select * from Users;";
             List<Dictionary<string, object>> result = DbConnector.Query(query);
+            foreach(Dictionary<string, object> dict in result)
+            {   
+                foreach (KeyValuePair<string, object> item in dict)
+                {
+                    Console.WriteLine(item.Value);   
+                }
+            }
         }
 
         static void Insert(){
@@ -24,7 +31,7 @@ namespace dbconnection
         }
         static void Main(string[] args)
         {
-            Insert();
+            Read();
         }
     }
 }
