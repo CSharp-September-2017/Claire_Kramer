@@ -24,9 +24,13 @@ namespace dojodachi.Controllers {
                 int Meals = 3;
                 HttpContext.Session.SetInt32("Meals", Meals);
             }
+            if(HttpContext.Session.GetString("Mood") == null) {
+                HttpContext.Session.SetString("Mood", "Normal");
+            }
             if (HttpContext.Session.GetInt32("Fullness") > 99 && HttpContext.Session.GetInt32("Happiness") > 99 && HttpContext.Session.GetInt32("Energy") > 99) {
                 HttpContext.Session.SetString("Message", "You Win!");
                 HttpContext.Session.SetString("Status", "Done");
+                HttpContext.Session.SetString("Mood", "Normal");
             }
             else {
                 HttpContext.Session.SetString("Status", "Play");
@@ -36,6 +40,7 @@ namespace dojodachi.Controllers {
                 if(HttpContext.Session.GetInt32((string)key) == 0) {
                     HttpContext.Session.SetString("Message", "Your Dojodachi Died...");
                     HttpContext.Session.SetString("Status", "Done");
+                    HttpContext.Session.SetString("Mood", "Sad");
                 }
             }
             ViewBag.Fullness = HttpContext.Session.GetInt32("Fullness");
@@ -44,6 +49,7 @@ namespace dojodachi.Controllers {
             ViewBag.Meals = HttpContext.Session.GetInt32("Meals");
             ViewBag.Message = HttpContext.Session.GetString("Message");
             ViewBag.Status = HttpContext.Session.GetString("Status");
+            ViewBag.Mood = HttpContext.Session.GetString("Mood");
             return View();
         }
 
@@ -54,6 +60,7 @@ namespace dojodachi.Controllers {
             int? Meals = HttpContext.Session.GetInt32("Meals");
             int? Fullness = HttpContext.Session.GetInt32("Fullness");
             if(Meals == 0) {
+                HttpContext.Session.SetString("Mood", "Sad");
                 HttpContext.Session.SetString("Message", "No Meals to Feed Dojodachi");
                 return RedirectToAction("Index");
             } 
@@ -62,10 +69,12 @@ namespace dojodachi.Controllers {
                 HttpContext.Session.SetInt32("Meals", (int)Meals);
                 if (random.Next(0,4) > 0) {
                     Fullness += random.Next(5,11);
+                    HttpContext.Session.SetString("Mood", "Normal");
                     HttpContext.Session.SetInt32("Fullness", (int)Fullness);
                     HttpContext.Session.SetString("Message", "Fed Your Dojodachi");
                 }
                 else {
+                    HttpContext.Session.SetString("Mood", "Sad");
                     HttpContext.Session.SetString("Message", "Your Dojodachi didn't like the meal...");
                 }
                 return RedirectToAction("Index");
@@ -79,6 +88,7 @@ namespace dojodachi.Controllers {
             int? Happiness = HttpContext.Session.GetInt32("Happiness");
             int? Energy = HttpContext.Session.GetInt32("Energy");
             if (Energy < 5) {
+                HttpContext.Session.SetString("Mood", "Sad");
                 HttpContext.Session.SetString("Message", "Not Enough Energy");
                 return RedirectToAction("Index");
             }
@@ -86,10 +96,12 @@ namespace dojodachi.Controllers {
             HttpContext.Session.SetInt32("Energy", (int)Energy);
             if(random.Next(0,4) > 0) {
                 Happiness += random.Next(5,11);
+                HttpContext.Session.SetString("Mood", "Play");
                 HttpContext.Session.SetInt32("Happiness", (int)Happiness);
                 HttpContext.Session.SetString("Message", "Your Dojodachi's Happiness Improved!");
             }
             else {
+                HttpContext.Session.SetString("Mood", "Sad");
                 HttpContext.Session.SetString("Message", "Looks like Your Dojodachi didn't want to play...");
             }
             return RedirectToAction("Index");
@@ -102,6 +114,7 @@ namespace dojodachi.Controllers {
             int? Energy = HttpContext.Session.GetInt32("Energy");
             int? Meals = HttpContext.Session.GetInt32("Meals");
             if (Energy < 5) {
+                HttpContext.Session.SetString("Mood", "Sad");
                 HttpContext.Session.SetString("Message", "Not Enough Energy");
                 return RedirectToAction("Index");
             }
@@ -110,6 +123,7 @@ namespace dojodachi.Controllers {
             HttpContext.Session.SetInt32("Energy", (int)Energy);
             HttpContext.Session.SetInt32("Meals", (int)Meals);
             HttpContext.Session.SetString("Message", "Your Dojodachi is Hard Working!");
+            HttpContext.Session.SetString("Mood", "Normal");
             return RedirectToAction("Index");
         }
 
@@ -122,10 +136,12 @@ namespace dojodachi.Controllers {
             Energy += 15;
             HttpContext.Session.SetInt32("Energy", (int)Energy);
             if (Fullness < 5) {
+                HttpContext.Session.SetString("Mood", "Sad");
                 HttpContext.Session.SetString("Message", "Your Dojodachi is Hungry");
                 return RedirectToAction("Index");
             }
             if (Happiness < 5) {
+                HttpContext.Session.SetString("Mood", "Sad");
                 HttpContext.Session.SetString("Message", "Your Dojodachi is Unhappy");
                 return RedirectToAction("Index");
             }
@@ -134,6 +150,7 @@ namespace dojodachi.Controllers {
             HttpContext.Session.SetInt32("Fullness", (int)Fullness);
             HttpContext.Session.SetInt32("Happiness", (int)Happiness);
             HttpContext.Session.SetString("Message", "Your Dojodachi is Sleeping. Shhhh...");
+            HttpContext.Session.SetString("Mood", "Normal");
             return RedirectToAction("Index");
         }
 

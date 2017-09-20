@@ -11,7 +11,17 @@
                 <p>Fullness: @ViewBag.Fullness | Happiness: @ViewBag.Happiness | Meals: @ViewBag.Meals | Energy: @ViewBag.Energy</p>
             </div>
             <div id="dojodachi">
-                <img src="~/css/dojodachi.jpeg">
+                @{
+                    if(ViewBag.Mood == "Normal"){
+                        <img src="~/css/dojodachi.jpeg">
+                    }
+                    else if(ViewBag.Mood == "Sad") {
+                        <img src="~/css/sit.jpg">
+                    }
+                    else if(ViewBag.Mood == "Play") {
+                        <img src="~/css/play.jpg">
+                    }
+                }
                 <h4>@ViewBag.Message</h4>
             </div>
             <div id="buttons">
