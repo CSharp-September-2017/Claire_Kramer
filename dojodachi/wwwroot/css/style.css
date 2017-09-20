@@ -20,10 +20,13 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#buttons {
+h4 {
     color: #ffb8a4;
+}
+
+#buttons {
+    text-align: center;
     margin-top: 5px;
-    margin-left: 35%;
 }
 
 button {
