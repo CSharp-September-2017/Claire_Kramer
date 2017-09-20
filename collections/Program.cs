@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+//The code looks good Claire.  Well done. Looks like you're understanding collections and randoms quite well. 
 namespace collections
 {
     class Program

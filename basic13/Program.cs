@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+//Well done Claire.  You're showing a strong understanding of the language already.
 namespace basic13
 {
     class Program
@@ -58,7 +58,9 @@ namespace basic13
            {
                sum = sum + num;
            }
-            int average = sum/(array.Length);
+            int average = sum/(array.Length); // Interesting isn't it that we can say int sum and divide by another int, 
+                                              // and say the average will be int as well despite that not always working out that way! 
+                                              // like 9(sum)/2(array.Length) = 4.5 This works either way but do you think it's accurate?
             Console.WriteLine("The average of the array is {0}", average);
        }
        public static int[] OddArray()
@@ -71,7 +73,7 @@ namespace basic13
                    oddList.Add(i);
                }
            }
-           return oddList.ToArray();
+           return oddList.ToArray(); //clever
        }
        public static void GreaterThan(int[] array, int y)
        {
@@ -137,7 +139,7 @@ namespace basic13
                Console.WriteLine(num);
            }
        }
-       public static object[] NumberToString(object[] array)
+       public static object[] NumberToString(object[] array) // Brilliant to return generic object[], but does a generic object[] come in? Or is it int[]?
        {
            for (int i = 0; i < array.Length; i++)
            {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+// Easy enough right?  Hopefully the muscle-memory is building up after creating these smaller projects.
 namespace callingcard.Controllers {
     public class UsersContoller : Controller {
         [HttpGet]
