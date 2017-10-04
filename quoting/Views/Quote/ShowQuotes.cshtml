@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Show Quotes</title>
+    </head>
+    <body>
+        <h1>Here are the awesome quotes!</h1>
+        @foreach (var quote in @ViewBag.AllQuotes)
+        {
+            <p>@quote["quote"]</p>
+            <p>-@quote["name"] at @quote["createdAt"]</p>
+        }
+    </body>
+</html>

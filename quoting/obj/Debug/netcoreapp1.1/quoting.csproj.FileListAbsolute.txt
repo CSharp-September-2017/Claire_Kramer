@@ -1,0 +1,8 @@
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/bin/Debug/netcoreapp1.1/quoting.deps.json
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/bin/Debug/netcoreapp1.1/quoting.runtimeconfig.json
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/bin/Debug/netcoreapp1.1/quoting.runtimeconfig.dev.json
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/bin/Debug/netcoreapp1.1/quoting.dll
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/bin/Debug/netcoreapp1.1/quoting.pdb
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/obj/Debug/netcoreapp1.1/quoting.AssemblyInfo.cs
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/obj/Debug/netcoreapp1.1/quoting.dll
+/Users/clairekramer/Desktop/DojoAssignments/C#/quoting/obj/Debug/netcoreapp1.1/quoting.pdb
