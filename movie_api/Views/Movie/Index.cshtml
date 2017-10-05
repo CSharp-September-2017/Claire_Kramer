@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Movie Lookup:</h1>
+<form action="/movie/{title}" method="POST">
+    <p>Search for a Movie: <input id="title" type="text"></p>
+    <input type="Submit" value="Search Movie!">
+</form>
+
+@foreach (var movie in @ViewBag.AllMovies)
+{
+    <p>@movie["Title"] Rating: @movie["Rating"] Released @movie["Release_year"]</p>
+}
+

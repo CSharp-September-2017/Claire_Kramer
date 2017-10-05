@@ -8,10 +8,10 @@ using notes.Factories;
 
 namespace notes.Controllers
 {
-    public class HomeController : Controller
+    public class NotesController : Controller
     {
         private readonly NoteFactory _noteFactory;
-        public HomeController(NoteFactory noteFactory) {
+        public NotesController(NoteFactory noteFactory) {
             _noteFactory = noteFactory;
         }
 
