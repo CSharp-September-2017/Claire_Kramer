@@ -29,10 +29,16 @@ namespace forms.Controllers
             };
             TryValidateModel(NewUser);
             if(ModelState.IsValid) {
-                return View();
+                return RedirectToAction("Success");
             }
             ViewBag.errors = ModelState.Values;
-            return View("Index");
+            return View();
+        }
+
+        [HttpGet]
+        [Route("success")]
+        public IActionResult Success() {
+            return View();
         }
     }
 }
